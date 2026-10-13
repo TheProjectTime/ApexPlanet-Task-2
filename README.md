@@ -1,129 +1,138 @@
-# ApexPlanet Internship — Task 2: Exploratory Data Analysis (EDA)
+# ApexPlanet Internship — Task 2
+## Exploratory Data Analysis (EDA) & Business Intelligence
 
-## 📌 Project Overview
+### Project Overview
 
-This project focuses on Exploratory Data Analysis (EDA) using Python to understand the dataset, identify patterns, detect unusual values, and discover useful insights through statistical analysis and data visualization.
+This project focuses on analyzing sales data to identify business trends, understand customer behavior, compare product performance, and generate useful business insights. It combines Python-based Exploratory Data Analysis (EDA), SQL queries, data visualizations, and an Excel dashboard.
 
-The analysis was performed using Google Colab as part of Task 2 of my ApexPlanet internship.
+The objective is to transform raw sales data into meaningful information that can support data-driven business decisions.
 
-## 🎯 Objectives
+### Objectives
 
-- Understand the structure and characteristics of the dataset.
-- Identify missing values and duplicate records.
-- Perform statistical analysis of numerical and categorical variables.
-- Visualize data distributions using charts and graphs.
-- Explore relationships between variables.
-- Detect potential outliers using the Interquartile Range (IQR) method.
-- Identify patterns and generate preliminary business insights.
+- Perform descriptive statistical analysis of the sales dataset.
+- Explore individual variables and identify patterns in the data.
+- Analyze relationships and correlations between numerical variables.
+- Use SQL queries to answer business-related questions.
+- Create visualizations to communicate important findings.
+- Develop an Excel dashboard to summarize sales performance.
 
-## 🛠️ Tools and Technologies
+### Tools and Technologies
 
-- **Python** — Programming language
-- **Google Colab** — Cloud-based coding environment
-- **Pandas** — Data manipulation and analysis
-- **NumPy** — Numerical computations
-- **Matplotlib** — Data visualization
-- **Seaborn** — Statistical data visualization
+- **Python:** Data analysis and data cleaning
+- **Pandas & NumPy:** Data manipulation and numerical analysis
+- **Matplotlib & Seaborn:** Data visualization
+- **SQL (SQLite):** Business queries, filtering, aggregation, and analysis
+- **Microsoft Excel:** PivotTables, charts, KPI summaries, and dashboard development
+- **Google Colab:** Python code execution and analysis
+- **GitHub:** Project documentation and version control
 
-## 📂 Project Structure
+### Project Structure
 
 ```text
 ApexPlanet-Task-2/
 │
 ├── data/
-│   └── ApexPlanet_DataAnalytics_Dataset.xlsx
+│   └── Sales dataset (Excel)
 │
-├── outputs/
+├── scripts/
+│   ├── Python EDA script
+│   └── sql_queries.sql
+│
+├── reports/
 │   ├── dataset_summary.csv
-│   └── correlation_matrix.csv
+│   ├── correlation_matrix.csv
+│   └── SQL query results
 │
-├── notebooks/
-│   └── ApexPlanet_Task_2_EDA.ipynb
+├── visualizations/
+│   ├── monthly_sales_trend.png
+│   ├── category_revenue.png
+│   └── top_5_products.png
+│
+├── dashboard/
+│   ├── ApexPlanet_Task_2_Dashboard.xlsx
+│   └── dashboard screenshot (PNG)
+│   └── dashboard (PDF)
 │
 └── README.md
 ```
 
-## 🔍 Analysis Performed
+*Note: The file names shown above are examples. Update them to match the actual files in your repository.*
 
-### 1. Data Inspection
-- Checked the number of rows and columns.
-- Displayed the first five records.
-- Examined column names and data types.
-- Generated descriptive statistics.
+### Analysis Performed
 
-### 2. Data Quality Analysis
-- Counted missing values in each column.
-- Calculated missing-value percentages.
-- Identified duplicate records.
-- Summarized unique values and data types.
+**1. Exploratory Data Analysis (EDA)**
 
-### 3. Univariate Analysis
-- Created histograms for numerical variables.
-- Used count plots to examine categorical variables.
-- Investigated distributions and frequently occurring categories.
+- Generated descriptive statistics to understand the dataset.
+- Examined individual variables and their distributions.
+- Analyzed relationships between sales-related variables.
+- Calculated correlations between numerical features.
+- Created charts to identify patterns and potential outliers.
 
-### 4. Bivariate Analysis
-- Created correlation heatmaps.
-- Used scatter plots to explore relationships between numerical variables.
-- Used box plots to compare numerical distributions across categories.
+**2. SQL Business Analysis**
 
-### 5. Outlier Detection
-- Applied the Interquartile Range (IQR) method.
-- Calculated lower and upper boundaries for numerical variables.
-- Identified potential outliers and visualized them using box plots.
+SQL queries were used to answer business questions, including:
 
-### 6. Multivariate Analysis
-- Created pair plots to examine relationships among multiple numerical variables.
-- Examined correlation matrices.
-- Identified strongly correlated variable pairs for further investigation.
+- What is the total revenue generated?
+- How many orders were recorded?
+- Which products generated the highest revenue?
+- Which product categories contributed the most revenue?
+- How did revenue change from month to month?
+- Which cities generated the highest sales?
+- Which customers had the highest order values?
 
-### 7. Business-Focused Visualization
-- Visualized frequently occurring categories.
-- Compared average numerical values across categories.
-- Explored patterns that may support data-driven decisions.
+**3. Data Visualization**
 
-## 📊 Output Files
+Charts were created to communicate the analysis clearly:
 
-| File | Description |
-|---|---|
-| `ApexPlanet_Task_2_EDA.ipynb` | Notebook containing Python code and analysis |
-| `dataset_summary.csv` | Dataset structure, data types, missing values, and unique-value counts |
-| `correlation_matrix.csv` | Correlations between numerical variables |
+- Monthly Sales Trend
+- Revenue by Product Category
+- Top 5 Products by Revenue
+- Correlation Analysis
 
-## 💡 Key Learnings
+**4. Excel Dashboard**
 
-- Understanding datasets before performing further analysis.
-- Using Pandas and NumPy for data exploration.
-- Creating meaningful visualizations with Matplotlib and Seaborn.
-- Detecting missing values, duplicates, and potential outliers.
-- Interpreting correlations and relationships between variables.
-- Presenting analytical results in a structured format.
+An interactive-style sales performance dashboard was developed in Microsoft Excel using KPI summaries, PivotTables, and charts.
 
-## ▶️ How to Run the Project
+The dashboard presents key sales metrics and helps users compare monthly performance, product categories, and top-performing products.
 
-1. Download or clone this repository.
-2. Open [Google Colab](https://colab.research.google.com/).
-3. Upload `ApexPlanet_Task_2_EDA.ipynb`.
-4. Upload the Excel dataset when prompted by the notebook.
-5. Run the notebook cells sequentially.
-6. Review the generated charts, statistical summaries, and output files.
+### Key Findings
 
-**Requirements:** Python 3, Pandas, NumPy, Matplotlib, Seaborn, and OpenPyXL for reading Excel files. Google Colab already provides most of these libraries.
+Based on the analysis performed:
 
-## ⚠️ Limitations
+- **Total revenue:** Approximately ₹13.94 crore.
+- **Total orders:** 992.
+- **Total quantity sold:** 5,435 units.
+- **Top revenue-generating category:** Electronics.
+- **Top product by revenue:** Laptop.
+- **Highest-revenue city:** Patna.
 
-- Outliers identified by statistical methods are not necessarily data errors.
-- Correlation does not establish causation.
-- Business conclusions depend on the meaning and quality of the dataset's variables.
-- The analysis is exploratory and may require further investigation before making business decisions.
+These findings summarize the dataset analyzed in this project. They do not necessarily represent the performance of a real business.
 
-## 👨‍💻 Project Information
+### Deliverables
 
-**Internship Organization:** ApexPlanet Software Pvt. Ltd.  
-**Task:** Task 2 — Exploratory Data Analysis (EDA)  
-**Environment:** Google Colab  
-**Language:** Python
+- Python EDA code
+- SQL queries and query results
+- Descriptive statistics and correlation reports
+- Sales visualization charts
+- Excel sales performance dashboard
+- Project documentation
+
+### Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+- Exploring and understanding structured datasets.
+- Performing descriptive and correlation analysis.
+- Writing SQL queries to solve business questions.
+- Creating meaningful data visualizations.
+- Building an Excel dashboard for business intelligence.
+- Organizing and documenting an analytics project using GitHub.
+
+### Conclusion
+
+This project demonstrates how Python, SQL, data visualization, and Microsoft Excel can be combined to analyze sales data and extract meaningful business insights. It strengthened my understanding of exploratory data analysis and business intelligence as part of my learning journey in data analytics and financial technology.
 
 ---
 
-*This project was completed as part of my learning journey in data analytics, focusing on exploratory analysis, statistical interpretation, and data visualization.*
+**Project:** ApexPlanet Internship — Task 2  
+**Focus Areas:** Exploratory Data Analysis, SQL, Business Intelligence, and Dashboard Development
